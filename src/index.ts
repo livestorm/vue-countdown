@@ -204,14 +204,14 @@ export default defineComponent({
     },
   },
 
-  mounted() {
-    document.addEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
-  },
+  // mounted() {
+  //   document.addEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
+  // },
 
-  beforeUnmount() {
-    document.removeEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
-    this.pause();
-  },
+  // beforeUnmount() {
+  //   document.removeEventListener(EVENT_VISIBILITY_CHANGE, this.handleVisibilityChange);
+  //   this.pause();
+  // },
 
   methods: {
     /**
@@ -385,20 +385,20 @@ export default defineComponent({
      * visibility change event handler.
      * @private
      */
-    handleVisibilityChange() {
-      switch (document.visibilityState) {
-        case 'visible':
-          this.update();
-          this.continue();
-          break;
+    // handleVisibilityChange() {
+    //   switch (document.visibilityState) {
+    //     case 'visible':
+    //       this.update();
+    //       this.continue();
+    //       break;
 
-        case 'hidden':
-          this.pause();
-          break;
+    //     case 'hidden':
+    //       this.pause();
+    //       break;
 
-        default:
-      }
-    },
+    //     default:
+    //   }
+    // },
   },
 
   render() {
